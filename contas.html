@@ -53,14 +53,15 @@
             font-weight: 500;
         }
 
-        /* Card de cada Conta Disponível */
+        /* Card de cada Conta Disponível (Sem Foto) */
         .conta-card {
             background: #f8fafc;
             border: 1px solid #e2e8f0;
             border-radius: 12px;
-            padding: 15px;
-            margin-bottom: 25px;
+            padding: 20px;
+            margin-bottom: 20px;
             text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
         }
 
         .conta-status {
@@ -69,36 +70,36 @@
             color: #ffffff;
             font-size: 11px;
             font-weight: 700;
-            padding: 3px 8px;
+            padding: 4px 10px;
             border-radius: 20px;
-            margin-bottom: 10px;
-            text-transform: uppercase;
-        }
-
-        /* Estilo para ajustar as imagens dos prints */
-        .conta-imagem {
-            width: 100%;
-            max-height: 450px;
-            object-fit: contain;
-            border-radius: 8px;
             margin-bottom: 12px;
-            border: 1px solid #e2e8f0;
-            background: #ffffff;
+            text-transform: uppercase;
         }
 
         .conta-info {
             font-family: 'Plus Jakarta Sans', sans-serif;
-            font-size: 16px;
+            font-size: 18px;
             color: #1e293b;
             font-weight: 700;
-            margin-bottom: 4px;
+            margin-bottom: 6px;
+        }
+
+        .conta-detalhe {
+            font-size: 14px;
+            color: #10b981;
+            font-weight: 600;
+            margin-bottom: 12px;
         }
 
         .conta-preco {
-            font-size: 18px;
-            color: #00adb5;
-            font-weight: 800;
-            margin-bottom: 12px;
+            font-size: 16px;
+            color: #475569;
+            font-weight: 700;
+            margin-bottom: 16px;
+            background: #e2e8f0;
+            display: inline-block;
+            padding: 4px 14px;
+            border-radius: 6px;
         }
 
         .btn-comprar {
@@ -109,7 +110,7 @@
             padding: 12px;
             border-radius: 8px;
             font-weight: 700;
-            font-size: 14px;
+            font-size: 15px;
             text-decoration: none;
             box-shadow: 0 4px 6px rgba(37, 211, 102, 0.2);
             transition: background 0.2s;
@@ -122,7 +123,7 @@
         .btn-voltar {
             display: block;
             text-align: center;
-            margin-top: 20px;
+            margin-top: 25px;
             font-size: 14px;
             color: #64748b;
             text-decoration: none;
@@ -142,25 +143,25 @@
     <div class="container">
         <header>
             <h1>Contas Disponíveis</h1>
-            <p class="subtitle">Saldos Garantidos acima de 4K por R$ 99,90</p>
+            <p class="subtitle">Saldos Garantidos e Prontos para Entrega</p>
         </header>
 
         <main>
 
             <div class="conta-card">
                 <span class="conta-status">Disponível</span>
-                <img src="IMG_5257.jpeg" alt="Print do Saldo 1" class="conta-imagem">
-                <div class="conta-info">Conta Ouro - Saldo Garantido +4K</div>
-                <div class="conta-preco">Valor: R$ 99,90</div>
-                <a href="https://wa.me/5532987194791?text=Olá ADM! Gostei da Conta Ouro (Foto 1) com saldo e quero fazer o pagamento de 99,90 para liberar." target="_blank" class="btn-comprar">📱 Pagar R$ 99,90 e Levar</a>
+                <div class="conta-info">Conta Ouro ID #01</div>
+                <div class="conta-detalhe">💰 Saldo Disponível: + R$ 4.200,00</div>
+                <div><span class="conta-preco">Taxa: R$ 99,90</span></div>
+                <a href="https://wa.me/5532987194791?text=Olá ADM! Quero a Conta Ouro ID 01 com saldo de 4K por R$ 99,90." target="_blank" class="btn-comprar">📱 Pagar Taxa e Levar</a>
             </div>
 
             <div class="conta-card">
                 <span class="conta-status">Disponível</span>
-                <img src="IMG_5258.png" alt="Print do Saldo 2" class="conta-imagem">
-                <div class="conta-info">Conta Premium - Saldo Garantido +4K</div>
-                <div class="conta-preco">Valor: R$ 99,90</div>
-                <a href="https://wa.me/5532987194791?text=Olá ADM! Gostei da Conta Premium (Foto 2) com saldo e quero fazer o pagamento de 99,90 para liberar." target="_blank" class="btn-comprar">📱 Pagar R$ 99,90 e Levar</a>
+                <div class="conta-info">Conta Premium ID #02</div>
+                <div class="conta-detalhe">💰 Saldo Disponível: + R$ 4.850,00</div>
+                <div><span class="conta-preco">Taxa: R$ 99,90</span></div>
+                <a href="https://wa.me/5532987194791?text=Olá ADM! Quero a Conta Premium ID 02 com saldo de 4K por R$ 99,90." target="_blank" class="btn-comprar">📱 Pagar Taxa e Levar</a>
             </div>
 
             <a href="index.html" class="btn-voltar">← Voltar para o Painel</a>
