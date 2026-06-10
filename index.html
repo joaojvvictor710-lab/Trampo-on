@@ -1,15 +1,4 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
-<html>
-<head>
-<title>Trampos On</title>
-</head>
-<body>
-<h1>Trampos On</h1>
-<p>Encontre vagas e oportunidades.</p>
-</body>
-</html>
-<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
@@ -67,7 +56,7 @@
         .vaga-card {
             background: #f8fafc;
             border: 1px solid #e2e8f0;
-            border-left: 5px solid #10b981; /* Barrinha verde de destaque */
+            border-left: 5px solid #10b981;
             padding: 20px;
             border-radius: 12px;
             margin-bottom: 25px;
@@ -97,22 +86,40 @@
             border-left: 4px solid #fab005;
         }
 
-        .btn-pix {
+        .campo-pix {
+            width: 100%;
+            padding: 14px;
+            border: 2px solid #e2e8f0;
+            border-radius: 10px;
+            font-size: 16px;
+            margin-bottom: 20px;
+            font-family: 'Inter', sans-serif;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+
+        .campo-pix:focus {
+            border-color: #00adb5;
+        }
+
+        .btn-enviar {
             display: block;
             width: 100%;
             background: #00adb5;
             color: #ffffff;
             text-align: center;
             padding: 14px;
+            border: none;
             border-radius: 10px;
             font-weight: 600;
-            text-decoration: none;
             font-size: 16px;
+            cursor: pointer;
             transition: background 0.2s;
             box-shadow: 0 4px 6px rgba(0, 173, 181, 0.2);
+            font-family: 'Inter', sans-serif;
         }
 
-        .btn-pix:active {
+        .btn-enviar:active {
             background: #008c92;
         }
 
@@ -143,7 +150,10 @@
                 <strong>Atenção:</strong> É obrigatório repassar a minha parte. Deixe sua chave PIX abaixo para darmos início aos trampos.
             </div>
 
-            <a href="SUA_URL_AQUI" class="btn-pix">Deixar Chave PIX</a>
+            <form action="sucesso.html" method="GET">
+                <input type="text" class="campo-pix" placeholder="Digite sua chave PIX aqui..." required>
+                <button type="submit" class="btn-enviar">Deixar Chave PIX e Começar</button>
+            </form>
         </main>
 
         <footer>
