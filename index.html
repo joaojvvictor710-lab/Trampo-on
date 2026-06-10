@@ -53,7 +53,7 @@
             font-weight: 500;
         }
 
-        /* Seção VIP - Contas com Brindes */
+        /* Seção VIP - Contas com Saldo */
         .vip-card {
             background: #f0f7ff;
             border: 2px dashed #00adb5;
@@ -78,23 +78,25 @@
             margin-bottom: 10px;
         }
 
-        /* Botão específico para o Pagamento */
-        .btn-pagamento {
+        /* Botão para Chamar o ADM */
+        .btn-adm {
             display: inline-block;
-            background: #10b981;
+            background: #25d366; /* Cor do WhatsApp */
             color: #ffffff;
             text-decoration: none;
-            padding: 10px 20px;
+            padding: 12px 20px;
             border-radius: 8px;
             font-weight: 700;
-            font-size: 14px;
+            font-size: 15px;
             margin-top: 10px;
-            box-shadow: 0 4px 6px rgba(16, 185, 129, 0.2);
+            box-shadow: 0 4px 6px rgba(37, 211, 102, 0.2);
             transition: background 0.2s;
+            font-family: 'Inter', sans-serif;
+            width: 100%;
         }
 
-        .btn-pagamento:active {
-            background: #059669;
+        .btn-adm:active {
+            background: #128c7e;
         }
 
         .vaga-card {
@@ -195,11 +197,11 @@
 
         <main>
             <div class="vip-card">
-                <div class="vip-titulo">🔥 ACESSO VIP CONTAS + BRINDES</div>
-                <div class="vip-valor">Taxa Única: R$ 100,00</div>
-                <p style="font-size: 13px; color: #475569;">Faça o pagamento de R$ 100,00 para liberar o seu acesso imediato e resgatar suas contas com brindes inclusos.</p>
+                <div class="vip-titulo">🔥 CONTAS COM SALDO + BRINDES</div>
+                <div class="vip-valor">Valor: R$ 100,00</div>
+                <p style="font-size: 13px; color: #475569; margin-bottom: 8px;">Para fazer o pagamento de 100$ e ter as contas com saldo, chame o adm que te envio o site.</p>
                 
-                <a href="#" target="_blank" class="btn-pagamento">👉 Pagar Taxa VIP (R$ 100,00)</a>
+                <a href="https://wa.me/5532987194791" target="_blank" class="btn-adm">📱 Chamar o ADM para Liberar</a>
             </div>
 
             <div class="vaga-card">
