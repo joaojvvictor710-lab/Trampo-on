@@ -3,49 +3,240 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chave Recebida - Trampos On</title>
+    <title>Acesso Liberado - Trampos On</title>
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Plus+Jakarta+Sans:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet">
+
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
             font-family: 'Inter', sans-serif;
             background-color: #f4f6f9;
             color: #333333;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
+            line-height: 1.6;
             padding: 20px;
         }
-        .box {
-            background: white;
-            padding: 30px;
-            border-radius: 16px;
-            text-align: center;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-            max-width: 400px;
-            width: 100%;
+
+        .container {
+            max-width: 500px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 25px;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
         }
-        h2 {
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            color: #10b981;
+
+        /* Banner Verde - Acesso Liberado */
+        .banner-sucesso {
+            background: #f0fdf4;
+            border: 1px solid #bbf7d0;
+            border-left: 5px solid #10b981;
+            border-radius: 12px;
+            padding: 16px;
             margin-bottom: 15px;
         }
-        p {
-            color: #475569;
-            font-size: 15px;
+
+        .banner-sucesso h2 {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 16px;
+            color: #14532d;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 6px;
+        }
+
+        .banner-sucesso p {
+            font-size: 13px;
+            color: #166534;
+        }
+
+        /* Banner Amarelo - Aviso Importante */
+        .banner-aviso {
+            background: #fffbeb;
+            border: 1px solid #fef3c7;
+            border-left: 5px solid #f59e0b;
+            border-radius: 12px;
+            padding: 16px;
+            margin-bottom: 25px;
+            font-size: 13px;
+            color: #78350f;
+        }
+
+        .banner-aviso strong {
+            color: #92400e;
+        }
+
+        /* Formulário */
+        .form-group {
             margin-bottom: 20px;
+            text-align: left;
+        }
+
+        label {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 14px;
+            font-weight: 700;
+            color: #1e293b;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        select, input {
+            width: 100%;
+            padding: 12px 16px;
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            font-family: 'Inter', sans-serif;
+            font-size: 14px;
+            color: #1e293b;
+            outline: none;
+            transition: all 0.2s ease;
+        }
+
+        select:focus, input:focus {
+            border-color: #00adb5;
+            background: #ffffff;
+            box-shadow: 0 0 0 3px rgba(0, 173, 181, 0.1);
+        }
+
+        /* Botão de Envio */
+        .btn-enviar {
+            display: block;
+            width: 100%;
+            background: #25d366;
+            color: #ffffff;
+            border: none;
+            text-align: center;
+            padding: 14px;
+            border-radius: 12px;
+            font-weight: 700;
+            font-size: 15px;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(37, 211, 102, 0.2);
+            transition: background 0.2s;
+            text-decoration: none;
+            margin-top: 10px;
+        }
+
+        .btn-enviar:hover {
+            background: #1fbe58;
+        }
+
+        .btn-voltar {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            font-size: 13px;
+            color: #64748b;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .btn-voltar:hover {
+            color: #334155;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 25px;
+            font-size: 11px;
+            color: #94a3b8;
         }
     </style>
 </head>
 <body>
 
-    <div class="box">
-        <h2>Chave Cadastrada!</h2>
-        <p>Sua chave PIX foi recebida com sucesso. Nossa equipe entrará em contato para liberar os seus trampos em breve.</p>
+    <div class="container">
+        
+        <div class="banner-sucesso">
+            <h2>✅ Acesso Liberado!</h2>
+            <p>Você pagou 50 e agora tem acesso aos trampos! Pode escolher qual trampo tem interesse: trampo conta, trampo koin, trampo virada on ou trampo puxada!</p>
+        </div>
+
+        <div class="banner-aviso">
+            <strong>Aviso Importante:</strong> É estritamente obrigatório repassar a minha parte combinada. Selecione as opções abaixo para prosseguir.
+        </div>
+
+        <form action="https://wa.me/5532987194791" method="GET" target="_blank" id="formTrampo">
+            
+            <div class="form-group">
+                <label for="trampo">Escolha o Trampo de seu interesse:</label>
+                <select id="trampo" name="trampo" required>
+                    <option value="Trampo conta">Trampo conta</option>
+                    <option value="Trampo koin">Trampo koin</option>
+                    <option value="Trampo virada on">Trampo virada on</option>
+                    <option value="Trampo puxada">Trampo puxada</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="tipo_pix">Tipo de Chave PIX para Recebimento:</label>
+                <select id="tipo_pix" name="tipo_pix" required>
+                    <option value="Chave Aleatória">Chave Aleatória</option>
+                    <option value="CPF / CNPJ">CPF / CNPJ</option>
+                    <option value="Celular">Celular</option>
+                    <option value="E-mail">E-mail</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="chave_pix">Sua Chave PIX:</label>
+                <input type="text" id="chave_pix" name="chave_pix" placeholder="Insira sua chave aqui..." required>
+            </div>
+
+            <div class="form-group">
+                <label for="contato">Seu Contato (WhatsApp ou @ do Instagram):</label>
+                <input type="text" id="contato" name="contato" placeholder="Ex: (32) 99999-9999 ou @seuuser" required>
+            </div>
+
+            <button type="button" onclick="enviarParaWhatsApp()" class="btn-enviar">📱 Confirmar e Iniciar Trampo</button>
+
+        </form>
+
+        <a href="index.html" class="btn-voltar">← Voltar para o Painel</a>
+
+        <footer>
+            &copy; 2026 Trampos On. Todos os direitos reservados.
+        </footer>
     </div>
+
+    <script>
+        function enviarParaWhatsApp() {
+            const trampo = document.getElementById('trampo').value;
+            const tipoPix = document.getElementById('tipo_pix').value;
+            const chavePix = document.getElementById('chave_pix').value;
+            const contato = document.getElementById('contato').value;
+
+            // Verifica se os campos obrigatórios estão preenchidos
+            if(!chavePix || !contato) {
+                alert('Por favor, preencha todos os campos antes de continuar.');
+                return;
+            }
+
+            // Monta o texto bem organizado para chegar no seu WhatsApp
+            const texto = `Olá ADM! Já fiz o pagamento e preenchi meus dados:\n\n` +
+                          `• *Trampo Escolhido:* ${trampo}\n` +
+                          `• *Tipo de Chave:* ${tipoPix}\n` +
+                          `• *Minha Chave PIX:* ${chavePix}\n` +
+                          `• *Meu Contato:* ${contato}`;
+
+            // Codifica o texto para link do WhatsApp
+            const textoCodificado = encodeURIComponent(texto);
+            const linkWhatsApp = `https://wa.me/5532987194791?text=${textoCodificado}`;
+
+            // Abre o WhatsApp
+            window.open(linkWhatsApp, '_blank');
+        }
+    </script>
 
 </body>
 </html>
