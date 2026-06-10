@@ -53,26 +53,28 @@
             font-weight: 500;
         }
 
-        /* Card de cada Conta Disponível (Sem Foto) */
+        /* Card de cada Conta Disponível (Sem Imagem) */
         .conta-card {
             background: #f8fafc;
             border: 1px solid #e2e8f0;
+            border-left: 5px solid #00adb5;
             border-radius: 12px;
             padding: 20px;
             margin-bottom: 20px;
-            text-align: center;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+            text-align: left;
+            position: relative;
         }
 
         .conta-status {
-            display: inline-block;
+            position: absolute;
+            top: 15px;
+            right: 15px;
             background: #10b981;
             color: #ffffff;
-            font-size: 11px;
+            font-size: 10px;
             font-weight: 700;
-            padding: 4px 10px;
+            padding: 3px 8px;
             border-radius: 20px;
-            margin-bottom: 12px;
             text-transform: uppercase;
         }
 
@@ -81,25 +83,32 @@
             font-size: 18px;
             color: #1e293b;
             font-weight: 700;
-            margin-bottom: 6px;
+            margin-bottom: 4px;
+            margin-top: 5px;
         }
 
-        .conta-detalhe {
+        .conta-detalhes {
             font-size: 14px;
-            color: #10b981;
-            font-weight: 600;
-            margin-bottom: 12px;
+            color: #64748b;
+            margin-bottom: 15px;
         }
 
         .conta-preco {
             font-size: 16px;
-            color: #475569;
-            font-weight: 700;
-            margin-bottom: 16px;
-            background: #e2e8f0;
+            color: #1e293b;
+            font-weight: 600;
+            margin-bottom: 15px;
+            background: #e6fffa;
             display: inline-block;
-            padding: 4px 14px;
+            padding: 4px 10px;
             border-radius: 6px;
+            border: 1px solid #b2f5ea;
+        }
+
+        .conta-preco strong {
+            color: #00adb5;
+            font-size: 18px;
+            font-weight: 800;
         }
 
         .btn-comprar {
@@ -110,7 +119,7 @@
             padding: 12px;
             border-radius: 8px;
             font-weight: 700;
-            font-size: 15px;
+            font-size: 14px;
             text-decoration: none;
             box-shadow: 0 4px 6px rgba(37, 211, 102, 0.2);
             transition: background 0.2s;
@@ -130,6 +139,10 @@
             font-weight: 500;
         }
 
+        .btn-voltar:hover {
+            color: #334155;
+        }
+
         footer {
             text-align: center;
             margin-top: 30px;
@@ -143,25 +156,25 @@
     <div class="container">
         <header>
             <h1>Contas Disponíveis</h1>
-            <p class="subtitle">Saldos Garantidos e Prontos para Entrega</p>
+            <p class="subtitle">Saldos Garantidos acima de 4K por R$ 99,90</p>
         </header>
 
         <main>
 
             <div class="conta-card">
                 <span class="conta-status">Disponível</span>
-                <div class="conta-info">Conta Ouro ID #01</div>
-                <div class="conta-detalhe">💰 Saldo Disponível: + R$ 4.200,00</div>
-                <div><span class="conta-preco">Taxa: R$ 99,90</span></div>
-                <a href="https://wa.me/5532987194791?text=Olá ADM! Quero a Conta Ouro ID 01 com saldo de 4K por R$ 99,90." target="_blank" class="btn-comprar">📱 Pagar Taxa e Levar</a>
+                <div class="conta-info">Conta Ouro #01</div>
+                <p class="conta-detalhes">Acesso imediato • Saldo verificado em carteira acima de R$ 4.000,00 • Brindes inclusos no pacote.</p>
+                <div class="conta-preco">Taxa de Liberação: <strong>R$ 99,90</strong></div>
+                <a href="https://wa.me/5532987194791?text=Olá ADM! Gostei da Conta Ouro 01 com saldo e quero fazer o pagamento de 99,90 para liberar." target="_blank" class="btn-comprar">📱 Pagar R$ 99,90 e Adquirir</a>
             </div>
 
             <div class="conta-card">
                 <span class="conta-status">Disponível</span>
-                <div class="conta-info">Conta Premium ID #02</div>
-                <div class="conta-detalhe">💰 Saldo Disponível: + R$ 4.850,00</div>
-                <div><span class="conta-preco">Taxa: R$ 99,90</span></div>
-                <a href="https://wa.me/5532987194791?text=Olá ADM! Quero a Conta Premium ID 02 com saldo de 4K por R$ 99,90." target="_blank" class="btn-comprar">📱 Pagar Taxa e Levar</a>
+                <div class="conta-info">Conta Premium #02</div>
+                <p class="conta-detalhes">Acesso imediato • Saldo verificado em carteira acima de R$ 4.000,00 • Suporte pós-entrega incluso.</p>
+                <div class="conta-preco">Taxa de Liberação: <strong>R$ 99,90</strong></div>
+                <a href="https://wa.me/5532987194791?text=Olá ADM! Gostei da Conta Premium 02 com saldo e quero fazer o pagamento de 99,90 para liberar." target="_blank" class="btn-comprar">📱 Pagar R$ 99,90 e Adquirir</a>
             </div>
 
             <a href="index.html" class="btn-voltar">← Voltar para o Painel</a>
