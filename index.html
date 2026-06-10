@@ -7,7 +7,7 @@
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
 
     <style>
         * {
@@ -35,9 +35,9 @@
 
         header {
             text-align: center;
-            margin-bottom: 30px;
+            margin-bottom: 25px;
             border-bottom: 2px solid #f0f2f5;
-            padding-bottom: 20px;
+            padding-bottom: 15px;
         }
 
         h1 {
@@ -53,31 +53,55 @@
             font-weight: 500;
         }
 
+        /* Seção VIP - Contas com Brindes */
+        .vip-card {
+            background: #f0f7ff;
+            border: 2px dashed #00adb5;
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+
+        .vip-titulo {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 18px;
+            color: #00adb5;
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+
+        .vip-valor {
+            font-size: 20px;
+            color: #1e293b;
+            font-weight: 800;
+            margin-bottom: 10px;
+        }
+
         .vaga-card {
             background: #f8fafc;
             border: 1px solid #e2e8f0;
             border-left: 5px solid #10b981;
-            padding: 20px;
+            padding: 15px;
             border-radius: 12px;
-            margin-bottom: 25px;
+            margin-bottom: 20px;
         }
 
         .vaga-titulo {
             font-family: 'Plus Jakarta Sans', sans-serif;
-            font-size: 18px;
+            font-size: 16px;
             color: #0f172a;
-            margin-bottom: 8px;
+            margin-bottom: 4px;
         }
 
         .vaga-valor {
-            font-size: 16px;
+            font-size: 15px;
             color: #10b981;
             font-weight: 600;
-            margin-bottom: 12px;
         }
 
         .instrucoes {
-            font-size: 14px;
+            font-size: 13px;
             color: #475569;
             margin-bottom: 20px;
             background: #fff9db;
@@ -86,19 +110,30 @@
             border-left: 4px solid #fab005;
         }
 
-        .campo-pix {
-            width: 100%;
-            padding: 14px;
-            border: 2px solid #e2e8f0;
-            border-radius: 10px;
-            font-size: 16px;
-            margin-bottom: 20px;
-            font-family: 'Inter', sans-serif;
-            outline: none;
-            transition: border-color 0.2s;
+        label {
+            display: block;
+            font-size: 14px;
+            font-weight: 600;
+            color: #334155;
+            margin-bottom: 8px;
+            margin-top: 15px;
         }
 
-        .campo-pix:focus {
+        /* Campos de Seleção e Texto */
+        .campo-input, select {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #e2e8f0;
+            border-radius: 10px;
+            font-size: 15px;
+            font-family: 'Inter', sans-serif;
+            outline: none;
+            background-color: #ffffff;
+            transition: border-color 0.2s;
+            margin-bottom: 10px;
+        }
+
+        .campo-input:focus, select:focus {
             border-color: #00adb5;
         }
 
@@ -114,6 +149,7 @@
             font-weight: 600;
             font-size: 16px;
             cursor: pointer;
+            margin-top: 25px;
             transition: background 0.2s;
             box-shadow: 0 4px 6px rgba(0, 173, 181, 0.2);
             font-family: 'Inter', sans-serif;
@@ -136,23 +172,52 @@
     <div class="container">
         <header>
             <h1>Trampos On</h1>
-            <p class="subtitle">Encontre vagas e oportunidades</p>
+            <p class="subtitle">Painel de Vagas e Oportunidades</p>
         </header>
 
         <main>
+            <div class="vip-card">
+                <div class="vip-titulo">🔥 ACESSO VIP CONTAS + BRINDES</div>
+                <div class="vip-valor">Taxa Única: R$ 100,00</div>
+                <p style="font-size: 13px; color: #475569;">Faça o pagamento de R$ 100,00 para liberar o seu acesso imediato e resgatar suas contas com brindes inclusos.</p>
+            </div>
+
             <div class="vaga-card">
-                <div class="vaga-titulo">Vagas Abertas</div>
-                <div class="vaga-valor">Valor pago: R$ 50,00</div>
-                <p style="font-size: 14px; color: #64748b;">Aproveite as oportunidades disponíveis e comece a trabalhar agora mesmo.</p>
+                <div class="vaga-titulo">Vagas Gerais Abertas</div>
+                <div class="vaga-valor">Valor fixo pago por trampo: R$ 50,00</div>
             </div>
 
             <div class="instrucoes">
-                <strong>Atenção:</strong> É obrigatório repassar a minha parte. Deixe sua chave PIX abaixo para darmos início aos trampos.
+                <strong>Aviso Importante:</strong> É estritamente obrigatório repassar a minha parte combinada. Selecione as opções abaixo para iniciar.
             </div>
 
             <form action="sucesso.html" method="GET">
-                <input type="text" class="campo-pix" placeholder="Digite sua chave PIX aqui..." required>
-                <button type="submit" class="btn-enviar">Deixar Chave PIX e Começar</button>
+                
+                <label for="tipo-trampo">Escolha o Trampo que deseja fazer:</label>
+                <select id="tipo-trampo" name="tipo_trampo" required>
+                    <option value="" disabled selected>Selecione uma opção...</option>
+                    <option value="Trampo conta">Trampo conta</option>
+                    <option value="Trampo koin">Trampo koin</option>
+                    <option value="Trampo virada on">Trampo virada on</option>
+                    <option value="Trampo puxada">Trampo puxada</option>
+                </select>
+
+                <label for="tipo-pix">Tipo de Chave PIX:</label>
+                <select id="tipo-pix" name="tipo_pix" required>
+                    <option value="" disabled selected>Selecione o tipo...</option>
+                    <option value="CPF">CPF</option>
+                    <option value="Celular">Celular / Telefone</option>
+                    <option value="E-mail">E-mail</option>
+                    <option value="Aleatoria">Chave Aleatória</option>
+                </select>
+
+                <label for="chave">Sua Chave PIX:</label>
+                <input type="text" id="chave" name="chave_pix" class="campo-input" placeholder="Insira os dados da sua chave aqui..." required>
+
+                <label for="contato">Seu Contato (WhatsApp ou @ do Instagram):</label>
+                <input type="text" id="contato" name="contato_usuario" class="campo-input" placeholder="Ex: (11) 99999-9999 ou @seu_perfil" required>
+
+                <button type="submit" class="btn-enviar">Confirmar Opções e Começar</button>
             </form>
         </main>
 
@@ -163,3 +228,4 @@
 
 </body>
 </html>
+
