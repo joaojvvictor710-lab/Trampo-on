@@ -29,22 +29,21 @@
             margin: 0 auto;
             background: #ffffff;
             padding: 25px;
-            border-radius: 16px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
         }
 
         header {
             text-align: center;
             margin-bottom: 25px;
-            border-bottom: 2px solid #f0f2f5;
             padding-bottom: 15px;
         }
 
         h1 {
             font-family: 'Plus Jakarta Sans', sans-serif;
-            font-size: 26px;
+            font-size: 28px;
             color: #1e293b;
-            margin-bottom: 6px;
+            letter-spacing: -1px;
         }
 
         .subtitle {
@@ -53,19 +52,32 @@
             font-weight: 500;
         }
 
-        .menu-section {
-            margin-bottom: 25px;
+        /* Banner de Status Ativo */
+        .status-badge {
+            background: #ecfdf5;
+            color: #10b981;
+            padding: 6px 12px;
+            border-radius: 50px;
+            font-size: 12px;
+            font-weight: 700;
+            display: inline-block;
+            margin-top: 10px;
+            border: 1px solid #d1fae5;
         }
 
-        /* Botões em formato de card/opções grandes */
+        .menu-grid {
+            display: grid;
+            gap: 12px;
+            margin-top: 20px;
+        }
+
         .menu-card {
             display: flex;
             align-items: center;
             background: #f8fafc;
             border: 1px solid #e2e8f0;
-            border-radius: 12px;
+            border-radius: 16px;
             padding: 16px;
-            margin-bottom: 15px;
             text-decoration: none;
             color: #1e293b;
             transition: all 0.2s ease;
@@ -74,59 +86,49 @@
         .menu-card:hover {
             border-color: #00adb5;
             background: #f1f5f9;
-            transform: translateY(-2px);
+            transform: scale(1.02);
         }
 
-        .menu-icon {
-            font-size: 24px;
-            margin-right: 15px;
+        .icon-box {
+            width: 45px;
+            height: 45px;
             background: #ffffff;
-            padding: 8px;
-            border-radius: 10px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            margin-right: 15px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
         }
 
-        .menu-text {
+        .card-info {
             flex: 1;
         }
 
-        .menu-title {
+        .card-title {
             font-family: 'Plus Jakarta Sans', sans-serif;
-            font-size: 16px;
+            font-size: 15px;
             font-weight: 700;
-            color: #1e293b;
+            display: block;
         }
 
-        .menu-desc {
-            font-size: 12px;
+        .card-desc {
+            font-size: 11px;
             color: #64748b;
-            margin-top: 2px;
+            display: block;
         }
 
-        .arrow {
-            color: #94a3b8;
-            font-weight: bold;
-            font-size: 16px;
-            margin-left: 10px;
+        .arrow-right {
+            color: #cbd5e1;
+            font-size: 18px;
         }
 
-        /* Banner de Destaque / Aviso */
-        .status-banner {
-            background: #e6fffa;
-            border: 1px solid #b2f5ea;
-            border-radius: 10px;
-            padding: 12px;
-            text-align: center;
-            font-size: 13px;
-            color: #00adb5;
-            font-weight: 600;
-            margin-bottom: 25px;
-        }
-
+        /* Rodapé */
         footer {
             text-align: center;
-            margin-top: 20px;
-            font-size: 12px;
+            margin-top: 25px;
+            font-size: 11px;
             color: #94a3b8;
         }
     </style>
@@ -136,40 +138,53 @@
     <div class="container">
         <header>
             <h1>Trampos On</h1>
-            <p class="subtitle">Gerenciamento e Contas Disponíveis</p>
+            <p class="subtitle">Painel de Gerenciamento de Contas</p>
+            <div class="status-badge">● SISTEMA OPERACIONAL</div>
         </header>
 
-        <!-- Banner Informativo -->
-        <div class="status-banner">
-            🟢 Sistema Online e Contas Atualizadas Hoje
-        </div>
-
-        <main class="menu-section">
+        <main class="menu-grid">
             
-            <!-- Opção 1: Ver Contas -->
             <a href="contas.html" class="menu-card">
-                <span class="menu-icon">👁️</span>
-                <div class="menu-text">
-                    <div class="menu-title">Contas Disponíveis</div>
-                    <div class="menu-desc">Veja saldos, valores de liberação e adquira.</div>
+                <div class="icon-box">🏦</div>
+                <div class="card-info">
+                    <span class="card-title">Contas Disponíveis</span>
+                    <span class="card-desc">Saldos garantidos e liberação imediata.</span>
                 </div>
-                <span class="arrow">&rarr;</span>
+                <div class="arrow-right">→</div>
             </a>
 
-            <!-- Opção 2: Suporte (Exemplo opcional, mude o link se quiser) -->
-            <a href="https://wa.me/5532987194791" target="_blank" class="menu-card">
-                <span class="menu-icon">📱</span>
-                <div class="menu-text">
-                    <div class="menu-title">Falar com Administrador</div>
-                    <div class="menu-desc">Dúvidas, suporte ou problemas com liberação.</div>
+            <a href="sucesso.html" class="menu-card">
+                <div class="icon-box">✅</div>
+                <div class="card-info">
+                    <span class="card-title">Trampos Já Pagos</span>
+                    <span class="card-desc">Provas de pagamento e contas entregues.</span>
                 </div>
-                <span class="arrow">&rarr;</span>
+                <div class="arrow-right">→</div>
+            </a>
+
+            <a href="sorteio.html" class="menu-card">
+                <div class="icon-box">🎁</div>
+                <div class="card-info">
+                    <span class="card-title">Sorteio Grátis</span>
+                    <span class="card-desc">Participe e concorra a contas premiadas.</span>
+                </div>
+                <div class="arrow-right">→</div>
+            </a>
+
+            <a href="https://wa.me/5532987194791" target="_blank" class="menu-card" style="background: #f0fff4; border-color: #c6f6d5;">
+                <div class="icon-box">📱</div>
+                <div class="card-info">
+                    <span class="card-title" style="color: #2f855a;">Falar com ADM</span>
+                    <span class="card-desc">Dúvidas, suporte e suporte técnico.</span>
+                </div>
+                <div class="arrow-right" style="color: #2f855a;">→</div>
             </a>
 
         </main>
 
         <footer>
-            &copy; 2026 Trampos On. Todos os direitos reservados.
+            &copy; 2026 Trampos On - Oficial. <br>
+            Segurança e Confiança em cada liberação.
         </footer>
     </div>
 
