@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trampos On</title>
+    <title>Painel Principal - Trampos On</title>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet">
 
     <style>
         * {
@@ -42,7 +42,7 @@
 
         h1 {
             font-family: 'Plus Jakarta Sans', sans-serif;
-            font-size: 28px;
+            font-size: 26px;
             color: #1e293b;
             margin-bottom: 6px;
         }
@@ -53,135 +53,79 @@
             font-weight: 500;
         }
 
-        /* Seção VIP - Contas com Saldo */
-        .vip-card {
-            background: #f0f7ff;
-            border: 2px dashed #00adb5;
-            padding: 20px;
-            border-radius: 12px;
+        .menu-section {
             margin-bottom: 25px;
-            text-align: center;
         }
 
-        .vip-titulo {
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            font-size: 18px;
-            color: #00adb5;
-            font-weight: 700;
-            margin-bottom: 6px;
-        }
-
-        .vip-valor {
-            font-size: 20px;
-            color: #1e293b;
-            font-weight: 800;
-            margin-bottom: 10px;
-        }
-
-        /* Botão para Chamar o ADM */
-        .btn-adm {
-            display: inline-block;
-            background: #25d366; /* Cor do WhatsApp */
-            color: #ffffff;
-            text-decoration: none;
-            padding: 12px 20px;
-            border-radius: 8px;
-            font-weight: 700;
-            font-size: 15px;
-            margin-top: 10px;
-            box-shadow: 0 4px 6px rgba(37, 211, 102, 0.2);
-            transition: background 0.2s;
-            font-family: 'Inter', sans-serif;
-            width: 100%;
-        }
-
-        .btn-adm:active {
-            background: #128c7e;
-        }
-
-        .vaga-card {
+        /* Botões em formato de card/opções grandes */
+        .menu-card {
+            display: flex;
+            align-items: center;
             background: #f8fafc;
             border: 1px solid #e2e8f0;
-            border-left: 5px solid #10b981;
-            padding: 15px;
             border-radius: 12px;
-            margin-bottom: 20px;
+            padding: 16px;
+            margin-bottom: 15px;
+            text-decoration: none;
+            color: #1e293b;
+            transition: all 0.2s ease;
         }
 
-        .vaga-titulo {
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            font-size: 15px;
-            color: #0f172a;
-            font-weight: 700;
-            margin-bottom: 6px;
-        }
-
-        .vaga-texto {
-            font-size: 14px;
-            color: #475569;
-        }
-
-        .instrucoes {
-            font-size: 13px;
-            color: #475569;
-            margin-bottom: 20px;
-            background: #fff9db;
-            padding: 12px;
-            border-radius: 8px;
-            border-left: 4px solid #fab005;
-        }
-
-        label {
-            display: block;
-            font-size: 14px;
-            font-weight: 600;
-            color: #334155;
-            margin-bottom: 8px;
-            margin-top: 15px;
-        }
-
-        .campo-input, select {
-            width: 100%;
-            padding: 12px;
-            border: 2px solid #e2e8f0;
-            border-radius: 10px;
-            font-size: 15px;
-            font-family: 'Inter', sans-serif;
-            outline: none;
-            background-color: #ffffff;
-            transition: border-color 0.2s;
-            margin-bottom: 10px;
-        }
-
-        .campo-input:focus, select:focus {
+        .menu-card:hover {
             border-color: #00adb5;
+            background: #f1f5f9;
+            transform: translateY(-2px);
         }
 
-        .btn-enviar {
-            display: block;
-            width: 100%;
-            background: #00adb5;
-            color: #ffffff;
-            text-align: center;
-            padding: 14px;
-            border: none;
+        .menu-icon {
+            font-size: 24px;
+            margin-right: 15px;
+            background: #ffffff;
+            padding: 8px;
             border-radius: 10px;
-            font-weight: 600;
-            font-size: 16px;
-            cursor: pointer;
-            margin-top: 25px;
-            transition: background 0.2s;
-            box-shadow: 0 4px 6px rgba(0, 173, 181, 0.2);
-            font-family: 'Inter', sans-serif;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.03);
         }
 
-        .btn-enviar:active {
-            background: #008c92;
+        .menu-text {
+            flex: 1;
+        }
+
+        .menu-title {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 16px;
+            font-weight: 700;
+            color: #1e293b;
+        }
+
+        .menu-desc {
+            font-size: 12px;
+            color: #64748b;
+            margin-top: 2px;
+        }
+
+        .arrow {
+            color: #94a3b8;
+            font-weight: bold;
+            font-size: 16px;
+            margin-left: 10px;
+        }
+
+        /* Banner de Destaque / Aviso */
+        .status-banner {
+            background: #e6fffa;
+            border: 1px solid #b2f5ea;
+            border-radius: 10px;
+            padding: 12px;
+            text-align: center;
+            font-size: 13px;
+            color: #00adb5;
+            font-weight: 600;
+            margin-bottom: 25px;
         }
 
         footer {
             text-align: center;
-            margin-top: 30px;
+            margin-top: 20px;
             font-size: 12px;
             color: #94a3b8;
         }
@@ -192,56 +136,36 @@
     <div class="container">
         <header>
             <h1>Trampos On</h1>
-            <p class="subtitle">Painel de Vagas e Oportunidades</p>
+            <p class="subtitle">Gerenciamento e Contas Disponíveis</p>
         </header>
 
-        <main>
-            <div class="vip-card">
-                <div class="vip-titulo">🔥 CONTA COM SALDO + BRINDES</div>
-                <div class="vip-valor">Por apenas: R$ 99,90</div>
-                <p style="font-size: 13px; color: #475569; margin-bottom: 4px; font-weight: 600;">Valores garantidos acima de 4k!</p>
-                <p style="font-size: 13px; color: #475569; margin-bottom: 8px;">Interessados chame o adm.</p>
-                
-                <a href="https://wa.me/5532987194791" target="_blank" class="btn-adm">📱 Chamar o ADM</a>
-            </div>
+        <!-- Banner Informativo -->
+        <div class="status-banner">
+            🟢 Sistema Online e Contas Atualizadas Hoje
+        </div>
 
-            <div class="vaga-card">
-                <div class="vaga-titulo">✅ Acesso Liberado!</div>
-                <p class="vaga-texto">Vc pagou 50 e agr tem acesso aos trampos! Pode escolher qual trampo tem interesse trampo conta, trampo koin trampo virada on ou trampo puxada!</p>
-            </div>
+        <main class="menu-section">
+            
+            <!-- Opção 1: Ver Contas -->
+            <a href="contas.html" class="menu-card">
+                <span class="menu-icon">👁️</span>
+                <div class="menu-text">
+                    <div class="menu-title">Contas Disponíveis</div>
+                    <div class="menu-desc">Veja saldos, valores de liberação e adquira.</div>
+                </div>
+                <span class="arrow">&rarr;</span>
+            </a>
 
-            <div class="instrucoes">
-                <strong>Aviso Importante:</strong> É estritamente obrigatório repassar a minha parte combinada. Selecione as opções abaixo para prosseguir.
-            </div>
+            <!-- Opção 2: Suporte (Exemplo opcional, mude o link se quiser) -->
+            <a href="https://wa.me/5532987194791" target="_blank" class="menu-card">
+                <span class="menu-icon">📱</span>
+                <div class="menu-text">
+                    <div class="menu-title">Falar com Administrador</div>
+                    <div class="menu-desc">Dúvidas, suporte ou problemas com liberação.</div>
+                </div>
+                <span class="arrow">&rarr;</span>
+            </a>
 
-            <form action="sucesso.html" method="GET">
-                
-                <label for="tipo-trampo">Escolha o Trampo de seu interesse:</label>
-                <select id="tipo-trampo" name="tipo_trampo" required>
-                    <option value="" disabled selected>Selecione uma opção...</option>
-                    <option value="Trampo conta">Trampo conta</option>
-                    <option value="Trampo koin">Trampo koin</option>
-                    <option value="Trampo virada on">Trampo virada on</option>
-                    <option value="Trampo puxada">Trampo puxada</option>
-                </select>
-
-                <label for="tipo-pix">Tipo de Chave PIX para Recebimento:</label>
-                <select id="tipo-pix" name="tipo_pix" required>
-                    <option value="" disabled selected>Selecione o tipo...</option>
-                    <option value="CPF">CPF</option>
-                    <option value="Celular">Celular / Telefone</option>
-                    <option value="E-mail">E-mail</option>
-                    <option value="Aleatoria">Chave Aleatória</option>
-                </select>
-
-                <label for="chave">Sua Chave PIX:</label>
-                <input type="text" id="chave" name="chave_pix" class="campo-input" placeholder="Insira sua chave aqui..." required>
-
-                <label for="contato">Seu Contato (WhatsApp ou @ do Instagram):</label>
-                <input type="text" id="contato" name="contato_usuario" class="campo-input" placeholder="Ex: (32) 99999-9999" required>
-
-                <button type="submit" class="btn-enviar">Confirmar e Iniciar Trampo</button>
-            </form>
         </main>
 
         <footer>
@@ -249,9 +173,5 @@
         </footer>
     </div>
 
-</body><a href="sorteio.html" style="display: block; text-align: center; color: #ff5252; font-weight: 700; margin-bottom: 20px; text-decoration: none;">🎉 Clique aqui para participar do nosso Sorteio de R$ 1.000,00!</a>
-
-</html><a href="contas.html" class="btn-adm">👁️ Ver Fotos das Contas e Pagar</a>
-
-
-
+</body>
+</html>
